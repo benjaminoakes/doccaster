@@ -1,0 +1,24 @@
+<h1>Ad-hoc Downloads</h1>
+
+<%= link_to 'Add', new_ad_hoc_download_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Seen</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ad_hoc_downloads.each do |ad_hoc_download| %>
+      <tr>
+        <td><%= link_to(ad_hoc_download.name, ad_hoc_download.url) %></td>
+        <td><%= ad_hoc_download.seen ? '&#x2713;'.html_safe : '' %></td>
+        <td><%= link_to 'Edit', edit_ad_hoc_download_path(ad_hoc_download) %></td>
+        <td><%= link_to 'Destroy', ad_hoc_download, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

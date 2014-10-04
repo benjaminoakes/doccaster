@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ad_hoc_download.name %>
+</p>
+
+<p>
+  <strong>URL:</strong>
+  <%= @ad_hoc_download.url %>
+</p>
+
+<p>
+  <strong>Seen:</strong>
+  <%= @ad_hoc_download.seen %>
+</p>
+
+<%= link_to 'Edit', edit_ad_hoc_download_path(@ad_hoc_download) %> |
+<%= link_to 'Back', ad_hoc_downloads_path %>
