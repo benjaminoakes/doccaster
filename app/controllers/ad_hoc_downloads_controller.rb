@@ -10,6 +10,7 @@ class AdHocDownloadsController < ApplicationController
 
     respond_to do |format|
       format.html do
+        @ad_hoc_downloads = @ad_hoc_downloads.order('created_at desc')
         render :index
       end
 
