@@ -47,6 +47,7 @@ class AdHocDownloadsController < ApplicationController
 
     respond_to do |format|
       if @ad_hoc_download.save
+        format.html { redirect_to ad_hoc_downloads_path, notice: 'Ad hoc download was successfully created.' }
       else
         format.html { render :new }
       end
